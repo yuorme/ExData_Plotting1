@@ -35,6 +35,6 @@ plot(x = power[[1]], y = power[[5]],
 
 #bottom-right: Global reactive power over time
 plot(x = power[[1]], y = power[[4]], type = "o", xlab = "datetime", ylab = "Global_reactive_power", 
-     lwd = 0.5, pch = ".") # lwd=0.5, pch=".", and type="o" is what I found to best match example output
+     lwd = 0.7, pch = ".") # lwd=0.7, pch=".", and type="o" is what I found to best match example output
 
 dev.off()
