@@ -20,13 +20,13 @@ par(mfcol=c(2, 2))
 
 #top-left: from Plot2.png
 plot(x = power[[1]], y = power[[3]], 
-     type = "l", xlab = "", ylab = "Global Active Power") #type = "l' sets line plot
+     type = "l", xlab = "", ylab = "Global Active Power")
 
 #bottom-left: from Plot3.png
-plot(x = power[[1]], y = power[[7]], type = "l", xlab = "", ylab = "Energy sub-metering") # creates plot with submeter_1
-points(x = power[[1]], y = power[[8]], type = "l", col = "red") # overlays submeter_2
-points(x = power[[1]], y = power[[9]], type = "l", col = "blue") # overlays submeter_3
-legend("topright", lty = 1, col = c("black", "red", "blue"), 
+plot(x = power[[1]], y = power[[7]], type = "l", xlab = "", ylab = "Energy sub-metering")
+points(x = power[[1]], y = power[[8]], type = "l", col = "red") 
+points(x = power[[1]], y = power[[9]], type = "l", col = "blue") 
+legend("topright", bty = "n", lty = 1, col = c("black", "red", "blue"), # bty="n" turns the legend box off.
        legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
 
 #top-right: Voltage over time
@@ -35,6 +35,6 @@ plot(x = power[[1]], y = power[[5]],
 
 #bottom-right: Global reactive power over time
 plot(x = power[[1]], y = power[[4]], type = "o", xlab = "datetime", ylab = "Global_reactive_power", 
-     lwd = 0.5, pch = ".") # lwd=0.5, pch=".", and type="o" is what I found to match example output
+     lwd = 0.5, pch = ".") # lwd=0.5, pch=".", and type="o" is what I found to best match example output
 
 dev.off()
